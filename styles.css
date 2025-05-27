@@ -1,0 +1,99 @@
+/* 1. Design Tokens */
+:root {
+  --color-primary-navy: #0B1020;
+  --color-accent-cyan: #1AB5BF;
+  --color-hover-blue: #001DF5;
+
+  --type-hero-xl: 96px/104px "Outfit", sans-serif;
+  --type-body: 24px/32px "Inter", sans-serif;
+  --type-btn: 700 24px/32px "Outfit", sans-serif;
+}
+
+/* 2. Reset & Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: var(--color-primary-navy);
+  color: #FFFFFF;
+  font: var(--type-body);
+  text-align: center;
+}
+
+/* 3. Container */
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* 4. Hero Section */
+#hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 5. Typography */
+h1 {
+  font: var(--type-hero-xl);
+  margin-bottom: 24px;
+}
+p.body {
+  margin-bottom: 32px;
+  line-height: 1.5;
+  color: #EEEEEE;
+}
+
+/* 6. Button */
+.btn {
+  display: inline-block;
+  box-sizing: content-box;
+  font: var(--type-btn);
+  color: #FFFFFF;
+  text-decoration: none;
+  background: none;
+  box-shadow: 0 0 0 6px #FFFFFF;
+  padding: 12px 36px;
+  margin-top: 48px;
+  transition: background-color 0.2s ease-in-out;
+}
+.btn:hover {
+  background-color: var(--color-hover-blue);
+}
+
+/* 7. Social Links */
+.social {
+  margin-top: 32px;
+}
+
+.social a {
+  display: inline-block;
+  margin: 0 8px;
+  text-decoration: none;       /* remove default underline */
+}
+
+.social-icon {
+  height: 20px;
+  width: auto;
+  filter: brightness(1);
+  transition: filter 0.2s ease-in-out;
+}
+
+.social a:hover .social-icon {
+  filter: brightness(0.8);      /* darken on hover */
+}
+
+
+
+
+
+
