@@ -56,13 +56,13 @@ p.body {
 /* 6. Button */
 .btn {
   display: inline-block;
-  box-sizing: content-box;
-  font: var(--type-btn);
+  box-sizing: content-box;        /* room for outside stroke */
+  font: var(--type-btn);          /* Outfit 24px/32px bold */
   color: #FFFFFF;
   text-decoration: none;
   background: none;
-  box-shadow: 0 0 0 6px #FFFFFF;
-  padding: 12px 36px;
+  box-shadow: 0 0 0 6px #FFFFFF;  /* “outside” stroke */
+  padding: 12px 36px;             /* 8px grid */
   margin-top: 48px;
   transition: background-color 0.2s ease-in-out;
 }
@@ -74,53 +74,44 @@ p.body {
 .social {
   margin-top: 32px;
 }
-
 .social a {
   display: inline-block;
   margin: 0 8px;
-  text-decoration: none;       /* remove default underline */
+  text-decoration: none;          /* remove link underline */
 }
-
-.social-icon {
+.social img {
   height: 20px;
-  width: auto;
-  filter: brightness(1);
+  width: auto;                    /* preserve aspect */
+  filter: brightness(1);  
   transition: filter 0.2s ease-in-out;
 }
-
-.social a:hover .social-icon {
-  filter: brightness(0.8);      /* darken on hover */
+.social a:hover img {
+  filter: brightness(0.8);        /* darken on hover */
 }
 
-/* 8. Responsive Typography */
+/* 8. Mobile Overrides */
 @media (max-width: 600px) {
-  /* Scale down your tokens for phones */
-  :root {
-    /* Hero shrinks from 96/104 → 48/56 */
-    --type-hero-xl: 48px/56px "Outfit", sans-serif;
-    /* Body shrinks from 24/32 → 18/24 */
-    --type-body: 18px/24px "Inter", sans-serif;
-    /* Button text shrinks too */
-    --type-btn: 700 18px/24px "Outfit", sans-serif;
-  }
-
-  /* Optional: tighten up gaps */
   h1 {
+    font-size: 48px;
+    line-height: 56px;
     margin-bottom: 16px;
   }
+
   p.body {
+    font-size: 18px;
+    line-height: 24px;
     margin-bottom: 24px;
   }
+
   .btn {
+    font-size: 18px;
+    line-height: 24px;
     padding: 10px 20px;
     margin-top: 32px;
+    box-shadow: 0 0 0 6px #FFF;
   }
+
   .social {
     margin-top: 24px;
   }
 }
-
-
-
-
-
