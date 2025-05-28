@@ -92,6 +92,33 @@ p.body {
   filter: brightness(0.8);      /* darken on hover */
 }
 
+/* 8. Responsive Typography */
+@media (max-width: 600px) {
+  /* Scale down your tokens for phones */
+  :root {
+    /* Hero shrinks from 96/104 → 48/56 */
+    --type-hero-xl: 48px/56px "Outfit", sans-serif;
+    /* Body shrinks from 24/32 → 18/24 */
+    --type-body: 18px/24px "Inter", sans-serif;
+    /* Button text shrinks too */
+    --type-btn: 700 18px/24px "Outfit", sans-serif;
+  }
+
+  /* Optional: tighten up gaps */
+  h1 {
+    margin-bottom: 16px;
+  }
+  p.body {
+    margin-bottom: 24px;
+  }
+  .btn {
+    padding: 10px 20px;
+    margin-top: 32px;
+  }
+  .social {
+    margin-top: 24px;
+  }
+}
 
 
 
