@@ -98,11 +98,17 @@ p.body {
     justify-content: center;
   }
 
+  /* add more breathing room at the edges */
+  .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
   /* Headline */
   h1 {
     font-size: 48px;
     line-height: 56px;
-    margin-bottom: 16px;
+    margin-bottom: 32px;  /* increased from 16px */
   }
 
   /* Body: smaller + justified rag */
