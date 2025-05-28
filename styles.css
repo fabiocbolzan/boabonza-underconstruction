@@ -56,13 +56,13 @@ p.body {
 /* 6. Button */
 .btn {
   display: inline-block;
-  box-sizing: content-box;        /* room for outside stroke */
-  font: var(--type-btn);          /* Outfit 24px/32px bold */
+  box-sizing: content-box;
+  font: var(--type-btn);
   color: #FFFFFF;
   text-decoration: none;
   background: none;
-  box-shadow: 0 0 0 6px #FFFFFF;  /* “outside” stroke */
-  padding: 12px 36px;             /* 8px grid */
+  box-shadow: 0 0 0 6px #FFFFFF;
+  padding: 12px 36px;
   margin-top: 48px;
   transition: background-color 0.2s ease-in-out;
 }
@@ -77,32 +77,44 @@ p.body {
 .social a {
   display: inline-block;
   margin: 0 8px;
-  text-decoration: none;          /* remove link underline */
+  text-decoration: none;
 }
 .social img {
   height: 20px;
-  width: auto;                    /* preserve aspect */
-  filter: brightness(1);  
+  width: auto;
+  filter: brightness(1);
   transition: filter 0.2s ease-in-out;
 }
 .social a:hover img {
-  filter: brightness(0.8);        /* darken on hover */
+  filter: brightness(0.8);
 }
 
 /* 8. Mobile Overrides */
 @media (max-width: 600px) {
+  /* Hero: top-align & half the original vertical gap */
+  #hero {
+    align-items: flex-start;
+    padding-top: 25vh;
+    justify-content: center;
+  }
+
+  /* Headline */
   h1 {
     font-size: 48px;
     line-height: 56px;
     margin-bottom: 16px;
   }
 
+  /* Body: smaller + justified rag */
   p.body {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 24px;
+    text-align: justify;
+    hyphens: auto;
   }
 
+  /* Button: smaller text, same stroke */
   .btn {
     font-size: 18px;
     line-height: 24px;
@@ -111,6 +123,7 @@ p.body {
     box-shadow: 0 0 0 6px #FFF;
   }
 
+  /* Social row tighter */
   .social {
     margin-top: 24px;
   }
