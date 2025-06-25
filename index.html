@@ -93,18 +93,20 @@
       </div>
     </div>
   </section>
-  <!-- 1. load Orb’s UMD bundle from jsdelivr -->
+<!-- 1) Load the standalone Orb script from jsDelivr -->
   <script src="https://cdn.jsdelivr.net/npm/@react-bits/backgrounds@0.1.4/dist/orb.browser.min.js"></script>
 
-  <!-- 2. call it -->
+  <!-- 2) Initialize it on your #orb-background container -->
   <script>
+    console.log('Orb bundle available?', typeof Orb);
     Orb({
       parent: document.getElementById('orb-background'),
-      count:   30,
-      colors:  ['#FFFFFF22','#FFFFFF11','#FFFFFF05'],
-      size:    [50,150],
-      speed:   [0.1,0.5],
+      count:  30,
+      colors: ['#FFFFFF22','#FFFFFF11','#FFFFFF05'],
+      size:   [50,150],
+      speed:  [0.1,0.5],
     });
-  </script> 
+    console.log('Orb instantiated.');
+  </script>
 </body>
 </html>
