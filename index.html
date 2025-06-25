@@ -93,19 +93,17 @@
       </div>
     </div>
   </section>
- <script type="module">
-  import { render, h } from 'https://esm.sh/preact@10';
-  import { Orb }          from 'https://esm.sh/@react-bits/backgrounds';
-  render(
-    h(Orb, {
-      speed:       0.5,
-      background: '#050616',
-      dotsColor:  '#2a365f',
-      linesColor: '#1a1f3a',
-    }),
-    document.getElementById('orb-background')
-  );
-</script>
+  <!-- 1. load Orb’s UMD bundle from jsdelivr -->
+  <script src="https://cdn.jsdelivr.net/npm/@react-bits/backgrounds@0.1.4/dist/orb.browser.min.js"></script>
 
+  <!-- 2. call it -->
+  <script>
+    Orb({
+      parent: document.getElementById('orb-background'),
+      count:   30,
+      colors:  ['#FFFFFF22','#FFFFFF11','#FFFFFF05'],
+      size:    [50,150],
+      speed:   [0.1,0.5],
+    });
 </body>
 </html>
