@@ -48,8 +48,8 @@
 </head>
 
 <body>
- <!-- orb-bg: drop-in animated background -->
-<div id="orb-background"></div>
+ <!-- Orb background container -->
+<div id="orb-background" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;"></div>
   <section id="hero">
     <div class="container">
       <!-- Logo -->
@@ -94,18 +94,17 @@
     </div>
   </section>
  <script type="module">
-  import { render, h } from 'https://esm.sh/preact@10';
-  import { Orb }          from 'https://esm.sh/@react-bits/backgrounds';
-  render(
-    h(Orb, {
-      speed:       0.5,
-      background: '#050616',
-      dotsColor:  '#2a365f',
-      linesColor: '#1a1f3a',
-    }),
-    document.getElementById('orb-background')
-  );
+  import { Orb } from 'https://esm.sh/@react-bits/backgrounds/orb'
+  // ⚙️ tweak these colors/speeds if you like
+  Orb({
+    parent: document.getElementById('orb-background'),
+    count: 30,
+    colors: ['#FFFFFF22','#FFFFFF11','#FFFFFF05'],
+    size: [50, 150],
+    speed: [0.1, 0.5],
+  })
 </script>
+
 
 </body>
 </html>
